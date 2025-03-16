@@ -13,14 +13,14 @@ export const useCartStore = defineStore('cart', {
   },
 
   actions: {
-    addProduct(product) {
-      const existingProduct = this.products.find((p) => p.article === product.article)
-      if (existingProduct) {
-        existingProduct.count += product.count
-      } else {
-        this.products.push(product)
-      }
-    },
+    // addProduct(product) {
+    //   const existingProduct = this.products.find((p) => p.article === product.article)
+    //   if (existingProduct) {
+    //     existingProduct.count += product.count
+    //   } else {
+    //     this.products.push(product)
+    //   }
+    // },
     updateProductCount(article, count) {
       const product = this.products.find((p) => p.article === article)
       if (product) {
